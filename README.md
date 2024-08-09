@@ -10,21 +10,42 @@ pyenv local 3.9.13
 python -V
 ```
 
-poetry를 사용해 가상환경을 관리합니다.
-
+가상환경 설정
 ```shell
+python -m venv venv
+```
+
+in mac
+```shell
+source venv/bin/activate
+```
+
+in window
+```shell
+venv\Scripts\activate
+```
+
+
+poetry를 사용해 가상환경을 관리합니다.
+```shell
+pip install poetry
 poetry install
 ```
 
-pre-commit으로 commit 전
+pre-commit으로 commit 전 포맷을 확인하고 pytest를 실행합니다.
 
 ```shell
 pre-commit install
+```
+
+pytest 동작 확인
+
+```shell
+pytest
 ```
 
 ## 요구사항
 
 ### 1차
 - [ ] 장기말을 생성합니다.
-- [ ] 체스 기물이 이동 할 수 있는 위치를 할 수 있다.
-- [ ] 체스 기물을 이동하여 위치를 변경한다.
+- [ ] 체스 기물이 이동 할 수 있는 위치를 알 수 있다.
